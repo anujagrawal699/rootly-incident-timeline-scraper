@@ -1,0 +1,127 @@
+[
+  {
+    "user": "U024BE7LH",
+    "text": "Hey team, how's everyone doing?",
+    "ts": "1723466100.000100"
+  },
+  {
+    "user": "U024BE7LH",
+    "text": "seeing some weird latency spikes on the checkout service <https://datadog.mycompany.com/d/abc-123|link to dashboard>",
+    "ts": "1723466220.000200"
+  },
+  {
+    "user": "U061F7AUR",
+    "text": ":alert: **Incident Declared:** High latency on Checkout API",
+    "ts": "1723466280.000300",
+    "pinned_to": ["C024BE91L"]
+  },
+  {
+    "user": "U024BE7LH",
+    "text": "I think it's related to the last deploy. Reverting now.",
+    "ts": "1723466400.000400"
+  },
+  {
+    "bot_id": "B123456",
+    "text": "Deployment `prod-release-v2.1.5` has been rolled back.",
+    "ts": "1723466580.000500"
+  },
+  {
+    "user": "U061F7AUR",
+    "text": "Okay, latency is back to normal. We'll keep monitoring.",
+    "ts": "1723466700.000600"
+  },
+  {
+    "user": "U061F7AUR",
+    "text": "✅ **Incident Resolved**",
+    "ts": "1723467300.000700",
+    "pinned_to": ["C024BE91L"]
+  },
+
+  {
+    "user": "U0AAA1111",
+    "text": "Noticed error rate increased in us-east-1 around 10 mins ago",
+    "ts": "1723467400.000800"
+  },
+  {
+    "user": "U024BE7LH",
+    "text": "deploying hotfix v2.1.6 to checkout",
+    "ts": "1723467460.000810"
+  },
+  {
+    "user": "U0AAA1111",
+    "text": "Graphs: <https://grafana.internal/d/checkout-latency|latency dashboard>",
+    "ts": "1723467520.000820"
+  },
+  {
+    "user": "U0BBB2222",
+    "text": "Mitigated by scaling replicas on checkout-api",
+    "ts": "1723467580.000830"
+  },
+  {
+    "user": "U024BE7LH",
+    "text": "Still seeing failed writes from the DB side",
+    "ts": "1723467640.000840"
+  },
+  {
+    "user": "U0CCC3333",
+    "text": "rolled back the canary to previous stable",
+    "ts": "1723467700.000850"
+  },
+  {
+    "user": "U0BBB2222",
+    "text": "bug traced to Redis timeouts on connection pool",
+    "ts": "1723467760.000860"
+  },
+  {
+    "user": "U0AAA1111",
+    "text": "Fix applied, systems stable, continuing monitoring",
+    "ts": "1723467820.000870"
+  },
+  { "user": "U0DDD4444", "text": "", "ts": "1723467880.000880" },
+  {
+    "user": "U0EEE5555",
+    "text": "Investigating auth errors impacting a subset of users",
+    "ts": "1723467940.000890"
+  },
+  {
+    "user": "U0EEE5555",
+    "text": "checkout is down for mobile clients only",
+    "ts": "1723468000.000900"
+  },
+  {
+    "user": "U0FFF6666",
+    "text": "Runbook: <https://wiki.internal/runbooks/checkout-incident|checkout incident runbook>",
+    "ts": "1723468060.000910"
+  },
+  {
+    "user": "U061F7AUR",
+    "text": "Postmortem scheduled for tomorrow 10am PT",
+    "ts": "1723468120.000920",
+    "pinned_to": ["C024BE91L"]
+  },
+  {
+    "bot_id": "B999999",
+    "text": "CI Notification: Deployment to staging complete",
+    "ts": "1723468180.000930"
+  },
+  {
+    "user": "U024BE7LH",
+    "text": "reverting feature flag toggle for new checkout flow",
+    "ts": "1723468240.000940"
+  },
+  {
+    "user": "U0AAA1111",
+    "text": "Monitoring metrics look good after revert",
+    "ts": "1723468300.000950"
+  },
+  {
+    "user": "U0EEE5555",
+    "text": "broken cart page on mobile Safari confirmed",
+    "ts": "1723468360.000960"
+  },
+  {
+    "user": "U024BE7LH",
+    "text": "deploy complete for hotfix v2.1.7",
+    "ts": "1723468420.000970"
+  }
+]
