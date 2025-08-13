@@ -20,7 +20,7 @@ export interface TimelineEvent {
 const TAG_KEYWORDS: Record<TimelineTag, string[]> = {
   'DEPLOYMENT': ['deploying', 'rolled back', 'reverting', 'deploy'],
   'ISSUE': ['error', 'failed', 'latency', 'down', 'bug', 'broken'],
-  'RESOLUTION': ['mitigated', 'resolved', 'fixed', 'monitoring', 'stable'],
+  'RESOLUTION': ['mitigated', 'resolved', 'fixed', 'monitoring', 'stable', 'back to normal', 'restored', 'recovered'],
   'KEY EVENT': ['investigating'],
   'REFERENCE': [],
 }
@@ -28,7 +28,7 @@ const TAG_KEYWORDS: Record<TimelineTag, string[]> = {
 function classifyTag(messageText: string): TimelineTag | null {
   const text = messageText.toLowerCase()
   // Order of evaluation matters per requirements
-  for (const tag of ['DEPLOYMENT', 'ISSUE', 'RESOLUTION', 'KEY EVENT'] as TimelineTag[]) {
+  for (const tag of ['DEPLOYMENT', 'RESOLUTION', 'ISSUE', 'KEY EVENT'] as TimelineTag[]) {
     const keywords = TAG_KEYWORDS[tag]
     if (keywords.some((kw) => text.includes(kw))) return tag
   }
